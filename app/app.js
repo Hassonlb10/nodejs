@@ -13,6 +13,8 @@ app.get('/', (req, res) => {
 
 // Endpoint for hate speech detection
 app.post('/detect', (req, res) => {
+  res.send('Inside detect');
+  console.log("Inside detect");
   // Assuming the text to analyze is sent in the request body
   const text = req.body.text;
 
