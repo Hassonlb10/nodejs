@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs'); // For reading files
-const { detectHateSpeech } = require('./trained_model'); // Replace with the appropriate module and function
+//const { detectHateSpeech } = require('./trained_model'); // Replace with the appropriate module and function
 
 const app = express();
 
@@ -37,22 +37,22 @@ app.post('/detect', async (req, res) => {
   }
 });
 
-// Example hate speech detection function
-// function detectHateSpeech(text) {
-//   console.log('Inside detectHateSpeech function');
-//   const hateSpeechKeywords = [
-//     "bitch", // Replace with actual hate speech words
-//     "hateword2",
-//     "hateword3",
-//     // Add more words as necessary
-//   ];
+//Example hate speech detection function
+function detectHateSpeech(text) {
+  console.log('Inside detectHateSpeech function');
+  const hateSpeechKeywords = [
+    "bitch", // Replace with actual hate speech words
+    "hateword2",
+    "hateword3",
+    // Add more words as necessary
+  ];
 
-//   text = text.toLowerCase(); // Case insensitive matching
-//   return hateSpeechKeywords.some(word => {
-//     console.log('Checking word:', word);
-//     return text.includes(word);
-//   });
-// }
+  text = text.toLowerCase(); // Case insensitive matching
+  return hateSpeechKeywords.some(word => {
+    console.log('Checking word:', word);
+    return text.includes(word);
+  });
+}
 
 // Start the server
 const PORT = process.env.PORT || 3000;
