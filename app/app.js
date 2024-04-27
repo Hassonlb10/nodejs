@@ -24,7 +24,7 @@ app.post('/detect', async (req, res) => {
     console.log('Text to analyze:', text);
 
     // Your hate speech detection logic goes here
-    const isHateSpeech = detectHateSpeech(text);
+    const isHateSpeech = await detectHateSpeech(text);
     console.log('Hate speech detected:', isHateSpeech);
 
     // Respond with the result
@@ -38,14 +38,14 @@ app.post('/detect', async (req, res) => {
 });
 
 // Example hate speech detection function
-function detectHateSpeech(text) {
-  console.log('Inside detectHateSpeech function');
-  const hateSpeechKeywords = [
-    "bitch", // Replace with actual hate speech words
-    "hateword2",
-    "hateword3",
-    // Add more words as necessary
-  ];
+// function detectHateSpeech(text) {
+//   console.log('Inside detectHateSpeech function');
+//   const hateSpeechKeywords = [
+//     "bitch", // Replace with actual hate speech words
+//     "hateword2",
+//     "hateword3",
+//     // Add more words as necessary
+//   ];
 
   text = text.toLowerCase(); // Case insensitive matching
   return hateSpeechKeywords.some(word => {
