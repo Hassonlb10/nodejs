@@ -24,7 +24,7 @@ app.post('/detect', async (req, res) => {
     console.log('Text to analyze:', text);
 
     // Your hate speech detection logic goes here
-    const isHateSpeech = await detectHateSpeech(text);
+    const isHateSpeech = detectHateSpeech(text);
     console.log('Hate speech detected:', isHateSpeech);
 
     // Respond with the result
