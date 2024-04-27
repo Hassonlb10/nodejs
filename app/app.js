@@ -47,12 +47,12 @@ app.post('/detect', async (req, res) => {
 //     // Add more words as necessary
 //   ];
 
-  text = text.toLowerCase(); // Case insensitive matching
-  return hateSpeechKeywords.some(word => {
-    console.log('Checking word:', word);
-    return text.includes(word);
-  });
-}
+//   text = text.toLowerCase(); // Case insensitive matching
+//   return hateSpeechKeywords.some(word => {
+//     console.log('Checking word:', word);
+//     return text.includes(word);
+//   });
+// }
 
 // Start the server
 const PORT = process.env.PORT || 3000;
