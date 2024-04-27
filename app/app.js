@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const fs = require('fs'); // For reading files
+//const fs = require('fs'); // For reading files
 //const { detectHateSpeech } = require('./trained_model'); // Replace with the appropriate module and function
 
 const app = express();
